@@ -1,0 +1,12 @@
+<h1 class="text-center mt-5">Equipos de La Liga Santander</h1>
+
+<div class="equipos-container">
+    @for (equipo of listEquipo; track $index) {
+    <div class="equipo-item">
+        <div class="escudo pointer" [style.background-image]="'url(' + equipo.Team.WikipediaLogoUrl + ')'" (click)="verEquipo(equipo.Team.TeamId)">
+        </div>
+    </div>
+    }
+
+</div>
+<p class="text-info text-center mt-5">Haz Click en los escudos para más información</p>

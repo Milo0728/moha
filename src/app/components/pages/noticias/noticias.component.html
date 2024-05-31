@@ -1,0 +1,17 @@
+<h1 class="text-center mt-5">Noticias</h1>
+<div class="noticias-container mb-5">
+    @for (noticia of listNoticia; track $index) {
+    <div class="noticia bg-oscuro p-3">
+        <div class="info">
+            <h2 class="text-uppercase fw-bold">{{ noticia.titulo }}</h2>
+            <p class="fst-italic">{{ noticia.fuente }}</p>
+            <p>{{ noticia.descripcion }}</p>
+            <button (click)="irNoticia(noticia.url)" mat-raised-button color="primary">Ver Noticia</button>
+
+        </div>
+        <div class="img">
+            <img src="{{ noticia.imagen}}" width="200px">
+        </div>
+    </div>
+    }
+</div>
