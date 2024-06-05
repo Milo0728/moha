@@ -22,7 +22,7 @@ export class EquipoComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const equipoId = +params['id']; // Parseamos a número
+      const equipoId = +params['id'];
 
       if (equipoId) {
         this.getEquipo(equipoId);
