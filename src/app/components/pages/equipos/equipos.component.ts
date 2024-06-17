@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { EquiposService } from '../../../services/equipos.service';
 import { Equipo } from '../../../models/equipo.interface';
 import { Router } from '@angular/router';
+import { MaterialModule } from '../../../modules/material/material.module';
 
 @Component({
   selector: 'app-equipos',
   standalone: true,
-  imports: [],
+  imports: [
+    MaterialModule
+  ],
   templateUrl: './equipos.component.html',
   styleUrl: './equipos.component.css'
 })
